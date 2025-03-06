@@ -1,17 +1,58 @@
-/* Normal desktop :1200px. */
-@media (min-width: 1200px) and (max-width: 1500px) {}
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
 
 
-/* Normal desktop :992px. */
-@media (min-width: 992px) and (max-width: 1200px) {}
+/*======================================
+    1. Large Screens & Desktops (1200px - 1500px)
+======================================*/
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .banner-area {
+        top: 0;
+    }
+}
 
+/*======================================
+    2. Small Desktops & Laptops (992px - 1199px)
+======================================*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner-area {
+        top: 0;
+    }
+}
 
-/* Tablet desktop :768px. */
-@media (min-width: 768px) and (max-width: 991px) {}
+/*======================================
+    3. Tablets (768px - 991px)
+======================================*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner-area {
+        top: 0;
+    }
 
+    .about-content {
+        margin-top: 30px;
+    }
 
-/* small mobile :320px. */
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 60% !important;
+        margin: auto !important;
+    }
+
+    header.header-sticky.sticky .header-area {
+        margin-top: 0;
+    }
+}
+
+/* ================================
+   4. Small Mobile (Max: 767px)
+   ================================ */
 @media (max-width: 767px) {
+
+    /* Footer Styling */
     .single-footer h4 {
         padding-bottom: 5px;
         margin-bottom: 15px;
@@ -20,9 +61,60 @@
     .single-footer {
         margin-bottom: 30px;
     }
+
+    /* Banner Area Styling */
+    .banner-area {
+        top: 0;
+    }
+
+    /* Header Area Adjustments */
+    .header-area {
+        margin-top: 10px;
+    }
+
+    .navbar-bg {
+        margin: 0;
+    }
+
+    header.header-sticky.sticky .header-area {
+        margin-top: 0;
+    }
+
+    /* About Section Styling */
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 60% !important;
+        margin: auto !important;
+    }
+
+    .about-content {
+        margin-top: 30px;
+    }
+
+    /* Contact Form Styling */
+    .contact-form {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Photo Area Styling */
+    .photo-area {
+        padding: 20px 0 !important;
+    }
+
+    .footer-area {
+        padding-top: 30px !important;
+        padding-bottom: 10px !important;
+    }
 }
 
-/* Large Mobile :480px. */
+
+/*======================================
+    5. Small Mobile Devices (Max: 480px)
+======================================*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .container {
         width: 450px

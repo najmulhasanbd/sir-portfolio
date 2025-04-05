@@ -107,7 +107,7 @@ nav.navbar ul li a {
 }
 
 nav.navbar ul li:hover>a {
-    color: red;
+    color: #335DFF;
 }
 
 nav.navbar ul li ul {
@@ -165,7 +165,7 @@ nav.navbar ul li ul li ul li a:hover {
 }
 
 nav.navbar ul li ul li:hover {
-    background: red;
+    background: #335DFF;
 }
 
 nav.navbar ul li ul li:hover>ul {
@@ -330,6 +330,23 @@ hr {
 .single-photo {
     position: relative;
     overflow: hidden;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.single-photo::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000061;
+    /* z-index: 1; */
+}
+
+.single-photo:hover:after {
+    z-index: 3;
 }
 
 .single-photo img {
@@ -358,6 +375,9 @@ hr {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
+    z-index: 4;
+    background: #fff;
+    color: #000;
 }
 
 /* contact */
